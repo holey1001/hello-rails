@@ -1,2 +1,10 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<p>Hello View!</p>
+<p> 10 + 1 = <%= 10 + 1 %></p>
+<p> 10 + 1 = <%= @num %></p>  <!-- /projects/hello-rails/app/controllers/users_controller.rbのインスタンス変数を参照 -->
+<ul>
+    <% @users.each do |user| %>
+    <li>
+        id: <%= user.id %>, name: <%= user.name %>, age: <%= user.age %>
+    </li>
+    <% end %>
+</ul>
